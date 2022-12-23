@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>My Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+
+
+<body>
+    <header>
+        <div class="header">
+            <h1>ZZA UJUNG TANJONG</h1>
+            <p><i>good food good mood</i> </p>
+          
+          <div class="reservee">
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="btn">Home</a></li>
+                        <li><a href="menu.html" class="btn">Menu</a></li>
+                        <li><a href="about.html" class="btn">About</a></li>
+                        <li><a href="loc.html" class="btn">Location</a></li>
+                        <li><a href="reserve.html" class="btn">Reserve</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <br>
+    <br>
+
+
+<main>
+
+
+          <h1 class="buk">B O O K I N G</h1><br><br>
+
+          <div class="myform">  
+          <form onsubmit="myFunction1()">
+            &nbsp;<label for="name">Name</label>
+            <input type="text" id="name" name="name">
+            &nbsp;<label for="email">Email</label>
+            <input type="email" id="email" name="email">
+            &nbsp;<label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+            &nbsp;<label for="party-size">Number of Customers</label>
+            <input type="number" id="party-size" name="party-size"><br>
+            &nbsp;<label for="date">Date</label><br>
+            <input type="date" id="date" name="date"><br>
+            &nbsp;<label for="time">Time</label><br>
+            <input type="time" id="time" name="time"><br><br>
+            
+            <input type="submit" value="Submit">
+
+        </form>
+        </div>
+        </main>
+
+      
+     <script>
+
+
+
+        document.getElementById("myBtn").onclick = function() {myFunction()};
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+      function myFunction1() {
+
+              var name = document.getElementById('name').value;
+              var email = document.getElementById('email').value;
+              var phone = document.getElementById('phone').value;
+              var date = document.getElementById('date').value;
+              var time = document.getElementById('time').value;
+              var party_size = document.getElementById('party-size').value;
+              
+              var receiptHTML = '<h1>Receipt</h1>';
+              receiptHTML += '<p>Name: ' + name + '</p>';
+              receiptHTML += '<p>Email: ' + email + '</p>';
+              receiptHTML += '<pPhone: ' + phone + '</p>';
+              receiptHTML += '<p>Date: ' + date + '</p>';
+              receiptHTML += '<p>Time: ' + time + '</p>';
+              receiptHTML += '<p>No of Guests: ' + party_size + '</p>';
+           
+              var receiptWindow = window.open('', 'Receipt', 'height=500,width=500');
+              receiptWindow.document.write(receiptHTML);
+
+
+          }
+          </script>
+    </body>
+    <br><br>
+    <div class="footer">
+        <h2>ZZA UJUNG TANJONG</h2><br>
+        <a href="mailto:zzaujungtanjong@gmail.com">zzaujungtanjung@gmail.com</a>
+      </div>
+  
+    </html>
